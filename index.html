@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+  <title>Time download</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+<body>
+    <main class="file-upload__container">
+
+        <div class="file-upload__content">
+            <div class="data-type__container">
+              <div class="amount">
+                  <input type="number" placeholder="Enter File Size.... " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter File Size....'" id="size">
+                  <select name="data-type" id="data">
+                      <option value="GB">GB</option>
+                      <option value="MB">MB</option>
+                  </select>
+             </div> 
+              <div class="speed">
+                  <input type="number" id="download-speed" placeholder="Enter estimated speed..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter estimated speed...'" >
+                  <select name="data-type" id="speed-data">
+                    <option value="MB/s">MB/s</option>
+                    <option value="Mb/s">Mb/s</option>
+                </select>
+                </div>
+         </div>
+              <div class="result">
+                  <label for="result">You have to wait:  </label>
+                  <input type="text" id="result-time">
+                  
+                </div>
+                <div class="convert-type">
+                    <select name="convert-size" id="convert-type">
+                        <option value="binary">binary</option>
+                        <option value="zecimal">zecimal</option>
+                    </select>
+                     <div class="button"><a href="#"  class="action__button">Press</a></div>
+                </div>
+             
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>

@@ -1,0 +1,171 @@
+:root {
+  --input-color: #99A3BA;
+  --input-border: #CDD9ED;
+  --input-background: #fff;
+  --input-placeholder: #CBD1DC;
+  --input-border-focus: #275EFE;
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #EEF4FF;
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #678EFE;
+  --font: "Manrope",sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F9FF;
+}
+body .amount, body .speed, body .convert-type {
+  max-width: 360px;
+}
+body .amount:not(:last-child), body .speed:not(:last-child), body .convert-type:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.file-upload__content {
+  background-color: #fff;
+  width: 320px;
+  padding: 30px;
+  border-radius: 35px;
+  box-shadow: 0px 20px 33px 6px rgba(34, 60, 80, 0.2);
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+}
+input::placeholder {
+  color: var(--input-placeholder);
+}
+input:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+}
+
+.amount, .speed, .convert-type {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.amount > select,
+.amount input, .speed > select,
+.speed input, .convert-type > select,
+.convert-type input {
+  white-space: nowrap;
+  display: block;
+}
+.amount > select:not(:first-child):not(:last-child),
+.amount input:not(:first-child):not(:last-child), .speed > select:not(:first-child):not(:last-child),
+.speed input:not(:first-child):not(:last-child), .convert-type > select:not(:first-child):not(:last-child),
+.convert-type input:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.amount > select:first-child,
+.amount input:first-child, .speed > select:first-child,
+.speed input:first-child, .convert-type > select:first-child,
+.convert-type input:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.amount > select:last-child,
+.amount input:last-child, .speed > select:last-child,
+.speed input:last-child, .convert-type > select:last-child,
+.convert-type input:last-child {
+  border-radius: 0 6px 6px 0;
+}
+.amount > select:not(:first-child),
+.amount input:not(:first-child), .speed > select:not(:first-child),
+.speed input:not(:first-child), .convert-type > select:not(:first-child),
+.convert-type input:not(:first-child) {
+  margin-left: -1px;
+}
+.amount input, .speed input, .convert-type input {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.amount > select, .speed > select, .convert-type > select {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.amount:focus-within > span, .speed:focus-within > span, .convert-type:focus-within > span {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}
+
+.result {
+  margin: 30px 0 0 0;
+}
+.result label {
+  font-weight: 600;
+  font-family: var(--font);
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.convert-type {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+}
+.convert-type .button {
+  background-color: var(--group-background);
+  width: 80px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid var(--group-background-focus);
+}
+.convert-type .button .action__button {
+  color: var(--group-color);
+  text-decoration: none;
+}
+.convert-type .button:hover {
+  background-color: var(--group-background-focus);
+}
+.convert-type .button:hover .action__button {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
